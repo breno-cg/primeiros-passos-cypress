@@ -1,3 +1,5 @@
+import userData from '../fixtures/users/userData.json'
+
 describe('Orange HRM Tests', () => {
 
   const selectorsList = {
@@ -13,9 +15,9 @@ describe('Orange HRM Tests', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     //cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Admin')
     //cy.get("[name='username']").type('Admin')
-    cy.get(selectorsList.usernameField).type('Admin')
+    cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
     //cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123')
-    cy.get(selectorsList.passwordField).type('admin123')
+    cy.get(selectorsList.passwordField).type(userData.userSuccess.password)
     //cy.get('.oxd-button').click()
     cy.get(selectorsList.loginButton).click()
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
@@ -28,8 +30,8 @@ describe('Orange HRM Tests', () => {
     //cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('test123')
     //cy.get('.oxd-button').click()
     //cy.get('.oxd-alert')
-    cy.get(selectorsList.usernameField).type('Test')
-    cy.get(selectorsList.passwordField).type('test123')
+    cy.get(selectorsList.usernameField).type(userData.userFail.username)
+    cy.get(selectorsList.passwordField).type(userData.userFail.password)
     cy.get(selectorsList.loginButton).click()
     cy.get(selectorsList.wrongCredentialAlert)
   })
