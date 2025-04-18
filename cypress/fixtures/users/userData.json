@@ -8,12 +8,11 @@
       "password": "test123"
     },
     "employeeData": {
-      "firstname": "FirstNameTest",
-      "lastname": "LastNameTest",
-      "employeeid": "EmpIdTest",
-      "otherid": "OtherIdTest",
-      "driverslicensenumber": "DriversLicenseTest",
-      "expirydate": "2025-10-10",
-      "birthdate": "1992-06-22"
+      "firstName": "FirstNameTest",
+      "lastName": "LastNameTest",
+      "employeeId": "EmpIdTest",
+      "otherId": "OtherIdTest",
+      "driversLicenseNumber": "123456",
+      "expiryDate": "2025-10-10"
     }
 }
